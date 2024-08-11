@@ -50,11 +50,11 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: use node.js
-        uses: actions/checkout@v4
+        uses: actions/setup-node@v4
         with:
           node-versions: '20.x'
       - name: configure github pages
-        uses: actions/setup-node@v4
+        uses: actions/configure-pages@v4
         with:
           static_site_generator: next
       - run: npm install
